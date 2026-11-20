@@ -1,0 +1,23 @@
+class Solution {
+    public static int findEquilibrium(int arr[]) {
+        int n = arr.length;
+        int totalSum = 0;
+        int leftSum = 0;
+        
+        // totalSum nikal liye
+        for(int i=0; i<n; i++){
+            totalSum += arr[i];
+        }
+        
+        // remaining Sum or right Sum
+        for(int i=0; i<n; i++){
+            totalSum -= arr[i];
+            if(leftSum == totalSum) return i; // compare left and right sum
+            leftSum += arr[i]; // add curr ele to left sum
+        }
+        return -1;
+    }
+}
+
+
+Problem Link : https://www.geeksforgeeks.org/problems/equilibrium-point-1587115620/1
