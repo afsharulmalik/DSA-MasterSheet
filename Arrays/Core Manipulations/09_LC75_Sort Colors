@@ -1,0 +1,35 @@
+class Solution {
+    public void sortColors(int[] nums) {
+        // Arrays.sort(nums);
+
+        int n = nums.length;
+        int low = 0;
+        int mid = 0;
+        int high = n-1;
+        while(mid<=high){
+            // repositioning 0
+            if(nums[mid]==0){
+                int temp = nums[low];
+                nums[low] = nums[mid];
+                nums[mid] = temp;
+                low++;
+                mid++;
+            }
+            //repositioning 1
+            else if(nums[mid]==1){
+                mid++;
+            }
+            // repositioning 2
+            else if(nums[mid]==2){
+                int temp = nums[mid];
+                nums[mid]=nums[high];
+                nums[high]=temp;
+                high--;
+            }
+        }
+    }
+}
+
+Implemented the Dutch National Flag algorithm to sort an array of colors represented by 0s, 1s, and 2s in a single pass.
+
+Problem Link : https://leetcode.com/problems/sort-colors/
