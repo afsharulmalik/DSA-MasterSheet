@@ -1,0 +1,25 @@
+class Solution {
+    // helper function 
+    public static boolean isPalindrome(int n){
+        int num = n;
+        int reverse = 0;
+        while(n>0){
+            int lastDigit = n%10;
+            reverse = reverse * 10 + lastDigit;
+            n/=10;
+        }
+        return num == reverse;
+    }
+    
+    // main function
+    public static boolean isPalinArray(int[] arr) {
+        for(int ele : arr){
+            if(!isPalindrome(ele)){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+Problem Link : https://www.geeksforgeeks.org/problems/palindromic-array-1587115620/1
