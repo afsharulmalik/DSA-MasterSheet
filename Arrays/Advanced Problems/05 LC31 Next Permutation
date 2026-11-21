@@ -1,0 +1,69 @@
+class Solution {
+
+    // helper function
+    public void swap(int[] nums, int i, int j){
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+
+    // helper function
+    public void reverse(int[] nums, int start, int end){
+        while(start<end){
+            swap(nums, start, end);
+            start++;
+            end--;
+        }
+    }
+
+    // main function
+    public void nextPermutation(int[] nums) {
+        int n = nums.length;
+        // find that blue gola index
+        int blueIdx = -1;
+        for(int i=n-1; i>0; i--){
+            if(nums[i]>nums[i-1]){
+                blueIdx = i-1;
+                break;
+            }
+        }
+
+        // finding idx to swap
+        if(blueIdx != -1){
+            int swapIdx = blueIdx;
+            for(int i=n-1; i>=blueIdx+1; i--){
+                if(nums[i]>nums[blueIdx]){
+                    swapIdx = i;
+                    break;
+                }
+            }
+            swap(nums, blueIdx,swapIdx);
+        }
+        reverse(nums, blueIdx+1,n-1);   
+    }
+}
+
+
+/*
+
+Help from YT : codestorywithMIK
+
+ just greater without changing alot 
+
+ jaise number hai 1 2 3 toh issey sbse min change kiye hue least greater number combination kya hoga ? 1 3 2 toh
+
+
+jaise number hai ek 2 1 3 toh iska lexographically kya hoga 
+                            2 1 3
+                            2 3 1
+                toh isme least greatest kon sa hai ? 
+                ofcourse 2 3 1 hai, toh yhi hoga answer hamara 
+
+
+number hai jaise 1 3 2 toh isko solve krne ke liye 1 se just greatest number dhundho aur usko ussey swap kardo
+toh number aayega 2 3 1 thik hai ? phir iske baad 1st index se last index tak jo v bacha hai unko reverse kardo 
+
+*/
+
+
+Problem Link : https://leetcode.com/problems/next-permutation/description/
