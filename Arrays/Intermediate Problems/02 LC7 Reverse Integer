@@ -1,0 +1,15 @@
+class Solution {
+    public int reverse(int x) {
+        long num = 0;
+        while(x!=0){
+            int lastDigit = x%10;
+            num = num*10+lastDigit;
+            x/=10;
+        }
+        if(num<Integer.MIN_VALUE || num>Integer.MAX_VALUE) return 0;
+        return (int) num;
+    }
+}
+
+
+Problem Link : https://leetcode.com/problems/reverse-integer/
