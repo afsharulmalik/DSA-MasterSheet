@@ -4,7 +4,7 @@ This section focuses on fundamental 2D array and matrix problems in Java. It cov
 
 ## Problems
 
-- [ ] **01. Sum of Elements in a Matrix** — Calculate the sum of all elements in a matrix.
+- [x] **01. Sum of Elements in a Matrix** — Calculate the sum of all elements in a matrix.
 - [ ] **02. Count Number of Zeroes** — Count the total number of zero-valued elements in a matrix.
 - [ ] **03. Count Negative Numbers in a Matrix** — Determine the number of negative elements in a matrix.
 - [ ] **04. Matrix Diagonal Sum** — Calculate the sum of the primary and secondary diagonals of a matrix.
