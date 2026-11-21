@@ -1,0 +1,22 @@
+class Solution {
+    // helper function
+    public static void reverse(int[] arr, int start, int end){
+        while(start<end){
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+    }
+    // main function
+    public void rotate(int[] arr) {
+        int n = arr.length;
+        if(n<=1) return;
+        reverse(arr,0,n-1); // poore array ko rotate kar rha hai
+        reverse(arr,1,n-1);
+    }
+}
+
+
+Problem Link : https://www.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one2614/1
