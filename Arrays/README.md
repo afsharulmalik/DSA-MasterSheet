@@ -1,34 +1,65 @@
-# Arrays — DSA-MasterSheet
+# Arrays – DSA Practice
 
-This directory contains my Data Structures and Algorithms (DSA) practice solutions focused on Arrays, implemented in Java.
+Arrays are a fundamental data structure used to store elements of the same type in contiguous indexed positions. They are essential for developing problem-solving skills and understanding core DSA concepts.
 
-The problems are organized into three difficulty levels to support structured learning, consistent revision, and coding interview preparation.
+This section contains **30 array problems** in Java, organized into four levels, from basic operations to advanced problem-solving techniques.
 
-## 🎯 Objectives
+## Part 1: Array Basics
+- [x] Find Element at a Given Index
+- [x] Min and Max in Array
+- [x] Sum of Array
+- [x] Sum of Digits
+- [x] Check If Array Is Sorted
+- [x] Alternates in Array
 
-- Strengthen fundamental concepts of Arrays.
-- Progress from basic problem-solving to advanced techniques.
-- Improve logical thinking and coding efficiency.
-- Understand brute-force and optimized approaches.
-- Analyze time and space complexity.
-- Build confidence for technical interviews and placements.
+## Part 2: Core Manipulations
+- [x] Remove Duplicates from Array
+- [x] Second Largest in Array
+- [x] Reverse an Array
+- [x] Missing Number
+- [x] Segregate 0s and 1s
+- [x] Maximum Consecutive Ones
+- [x] Palindromic Array
+- [x] Move Zeroes to End
+- [x] Sort Array with 0s, 1s and 2s (Dutch Flag)
 
-## 💻 Implementation
+## Part 3: Intermediate Problems
+- [x] Equilibrium Point
+- [x] Reverse Integer
+- [x] Leaders in Array
+- [x] Increasing Array
+- [x] Rearrange Array Elements by Sign
+- [x] Rotate Array by One
+- [x] Majority Element I (Boyer–Moore)
 
-- **Language:** Java
-- **Organization:** Difficulty-based problem progression
-- **Solutions:** Individual Java files
-- **Focus:** Logic, optimization, and complexity analysis
+## Part 4: Advanced Problems
+- [x] Rotate Array by K Steps
+- [x] Wiggle Sort II
+- [x] Majority Element II
+- [x] Best Time to Buy and Sell Stock
+- [x] Next Permutation
+- [x] Maximum Value of Expression
+- [x] First Missing Positive
 
-## 🔄 Revision Strategy
+## Concepts Covered
+- Array traversal and indexing
+- Searching and basic calculations
+- In-place array manipulation
+- Two pointers and reversal techniques
+- Array rotation and rearrangement
+- Majority element algorithms
+- Greedy approaches and mathematical patterns
+- Advanced problem-solving techniques
 
-- Solve problems independently before checking hints.
-- Understand the logic instead of memorizing solutions.
-- Optimize solutions whenever possible.
-- Revisit difficult problems regularly.
-- Track progress consistently.
+## Language
+Java
+
+## Platform
+GFG & Leetcode
+
+## Objective
+Build a strong foundation in arrays, improve algorithmic thinking, and prepare for technical interviews and coding assessments.
 
 ---
 
-**Goal:** Build strong DSA fundamentals and progress towards advanced problem-solving through consistent practice and revision.
-
+*Part of my DSA revision and placement preparation journey.*
