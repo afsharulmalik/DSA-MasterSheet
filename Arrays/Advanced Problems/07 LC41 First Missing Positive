@@ -1,0 +1,23 @@
+class Solution {
+    public int firstMissingPositive(int[] nums) {
+        int n = nums.length;
+        // hume saare elements ko ussey ek kmm index par shift karna padega
+        for(int i=0; i<n; i++){
+            while(nums[i]>=1 && nums[i] <=n && nums[nums[i]-1] != nums[i]){
+                int target = nums[i]-1;
+                int temp = nums[i];
+                nums[i] = nums[target];
+                nums[target] = temp;
+            }
+        }
+        // find 1st index missing its correct value
+        for(int i=0; i<n; i++){
+            if(nums[i] != i+1) return i+1;
+        }
+        // all integers from 1 to n is present
+        return n+1;
+    }
+}
+
+
+Problem Link : https://leetcode.com/problems/first-missing-positive/description/
