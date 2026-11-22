@@ -1,0 +1,34 @@
+class Solution {
+    public void rotate(int[][] matrix) {
+        // phle transpose nikalo aur phir uske rows ko reverse kardo 
+
+        // transpose
+        int m = matrix.length;
+        int n = matrix[0].length;
+        for(int i=0; i<m; i++){
+            for(int j=0; j<i; j++){
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
+            }
+        }
+
+        // reverse kardo 
+        for(int i=0; i<m; i++){
+        int left = 0;
+        int right = m-1;
+        // ye left and right ko for loop ke andar hi initialize karo bahar karoge toh bss 1st row reverse hoga
+            while(left<right){
+                int temp = matrix[i][left];
+                matrix[i][left] = matrix[i][right];
+                matrix[i][right] = temp;
+                left++;
+                right--;
+            }
+        }
+    }
+}
+
+
+
+Problem Link : https://leetcode.com/problems/rotate-image/
