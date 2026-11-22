@@ -4,9 +4,9 @@ This section focuses on advanced matrix problems in Java that require efficient 
 
 ## Problems
 
-- [ ] **01. Spiral Matrix**
-- [ ] **02. ZigZag Matrix**
-- [ ] **03. Rotate Matrix (90°)**
+- [x] **01. Spiral Matrix**
+- [x] **02. ZigZag Matrix**
+- [x] **03. Rotate Matrix (90°)**
 - [ ] **04. Determine Whether Matrix Can Be Obtained by Rotation**
 - [ ] **05. Set Matrix Zeroes**
 
