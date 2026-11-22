@@ -4,9 +4,9 @@ This section focuses on fundamental matrix operations using 2D arrays in Java. I
 
 ## Problems
 
-- [ ] **01. Addition of Two Square Matrices**
-- [ ] **02. Multiply Matrices**
-- [ ] **03. Transpose Matrix**
+- [x] **01. Addition of Two Square Matrices**
+- [x] **02. Multiply Matrices**
+- [x] **03. Transpose Matrix**
 
 ## Concepts Covered
 - 2D array traversal using nested loops
