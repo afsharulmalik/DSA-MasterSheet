@@ -1,0 +1,17 @@
+class Solution {
+    public boolean armstrongNumber(int num) {
+        if(num<0) return false;
+        int original = num;
+        int sum = 0;
+        int digits = String.valueOf(num).length();
+        while (num > 0) {
+            int digit = num % 10;
+            sum += Math.pow(digit, digits);
+            num /= 10;
+        }
+        return sum == original;
+    }
+}
+
+
+Problem Link : https://www.geeksforgeeks.org/problems/armstrong-numbers2727/1
