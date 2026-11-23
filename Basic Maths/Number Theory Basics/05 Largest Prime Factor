@@ -1,0 +1,23 @@
+class Solution {
+    static int largestPrimeFactor(int n) {
+        int largest = -1;
+        // even factors remove karo
+        while(n%2==0){
+            largest = 2;
+            n/=2;
+        }
+        // odd factor check karo 
+        for(int i=3; i*i<=n; i+=2){
+            while(n%i==0){
+                largest = i;
+                n/=i;
+            }
+        }
+        // remaining factor check karo
+        if(n>2) largest = n;
+        return largest;
+    }
+}
+
+
+Problem Link : https://www.geeksforgeeks.org/problems/largest-prime-factor2601/1
