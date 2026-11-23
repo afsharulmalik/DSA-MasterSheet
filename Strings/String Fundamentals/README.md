@@ -4,13 +4,13 @@ This section covers the basic concepts of strings and helps develop problem-solv
 
 ## Problems
 
-- [ ] 1. Maximum Occurring Character
-- [ ] 2. Remove Spaces
-- [ ] 3. Print First Letter of Every Word in the String
-- [ ] 4. Remove Consecutive Characters
-- [ ] 5. Valid Palindrome
-- [ ] 6. Valid Anagram
-- [ ] 7. Isomorphic Strings
+- [x] 1. Maximum Occurring Character
+- [x] 2. Remove Spaces
+- [x] 3. Print First Letter of Every Word in the String
+- [x] 4. Remove Consecutive Characters
+- [x] 5. Valid Palindrome
+- [x] 6. Valid Anagram
+- [x] 7. Isomorphic Strings
 
 ## Concepts Covered
 
