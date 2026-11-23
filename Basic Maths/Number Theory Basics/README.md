@@ -3,12 +3,12 @@
 Number Theory Basics focuses on mathematical properties of integers and efficient techniques for solving number-based problems in DSA.
 
 ## Problems
-- [ ] 1. Check if a Number is Armstrong
-- [ ] 2. Print All Divisors of a Number
-- [ ] 3. Check if a Number is Prime
-- [ ] 4. GCD / HCF of 2 Numbers
-- [ ] 5. Prime Factorisation of a Number
-- [ ] 6. Count Primes in Range L to R
+- [x] 1. Check if a Number is Armstrong
+- [x] 2. Print All Divisors of a Number
+- [x] 3. Check if a Number is Prime
+- [x] 4. GCD / HCF of 2 Numbers
+- [x] 5. Prime Factorisation of a Number
+- [x] 6. Count Primes in Range L to R
 
 ## Concepts Covered
 - Armstrong Numbers
