@@ -4,10 +4,10 @@ This section focuses on advanced string problems that strengthen problem-solving
 
 ## Problems
 
-- [ ] 1. Longest Palindromic Substring
-- [ ] 2. Multiply Two Strings
-- [ ] 3. Maximum Nesting Depth of the Parentheses
-- [ ] 4. Beauty of All Substrings
+- [x] 1. Longest Palindromic Substring
+- [x] 2. Multiply Two Strings
+- [x] 3. Maximum Nesting Depth of the Parentheses
+- [x] 4. Beauty of All Substrings
 
 ## Concepts Covered
 
