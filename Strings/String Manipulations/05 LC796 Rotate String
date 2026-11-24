@@ -1,0 +1,11 @@
+class Solution {
+    public boolean rotateString(String s, String goal) {
+        // Aapko do strings di gayi hain: s aur goal. Aapko yeh check karna hai ki kya s par kuch shifts perform karke usse goal banaya ja sakta hai ya nahi. Agar banaya ja sakta hai toh true return karein, warna false
+        if(s.length() == goal.length() && (s+s).contains(goal)) return true;
+        return false;
+    }
+}
+
+
+
+Problem Link : https://leetcode.com/problems/rotate-string/
