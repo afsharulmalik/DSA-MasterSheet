@@ -4,12 +4,12 @@ This section focuses on string manipulation techniques, transformations, and pro
 
 ## Problems
 
-- [ ] 1. Delete Characters To Make Fancy String
-- [ ] 2. Reverse Words in a String
-- [ ] 3. String to Integer (atoi)
-- [ ] 4. Roman to Integer
-- [ ] 5. Rotate String
-- [ ] 6. Longest Common Prefix
+- [x] 1. Delete Characters To Make Fancy String
+- [x] 2. Reverse Words in a String
+- [x] 3. String to Integer (atoi)
+- [x] 4. Roman to Integer
+- [x] 5. Rotate String
+- [x] 6. Longest Common Prefix
 
 ## Concepts Covered
 
