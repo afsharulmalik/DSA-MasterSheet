@@ -1,0 +1,43 @@
+class Solution {
+    // helper function
+    public int expand(String s, int left, int right){
+        while(left>=0 && right<s.length() && s.charAt(left)==s.charAt(right)){
+            left--; // centre se peeche jaa rhe hai
+            right++; // centre se aage jaa rhe hai
+        }
+        return right-left-1;
+    }
+    // main function
+    public String longestPalindrome(String s) {
+        // expand around centre wale concept se karenge
+        if(s==null || s.length()<1) return "";
+        int start = 0;
+        int end = 0;
+        for(int i=0; i<s.length(); i++){
+            int len1 = expand(s,i,i); // odd length
+            int len2 = expand(s,i,i+1); // even length
+            int len = Math.max(len1, len2);
+            if (len > end - start + 1) { // Ye code block check karta hai ki kya abhi jo palindrome mila hai, 
+            // wo pehle mile sabse lambe palindrome se bada hai, aur agar haan, toh uske start aur end index ko update karta hai.
+                start = i - (len - 1) / 2;
+                end = i + len / 2;
+            }
+        }
+        return s.substring(start, end+1);
+    }
+}
+
+/*
+String ke har character ko possible center maanenge.
+Har adjacent pair ko bhi possible center maanenge.
+Center se left aur right move karenge, jab tak dono characters equal hain.
+Har valid palindrome ki length calculate karke maximum length track karenge.
+Maximum length aur starting index se answer substring return kar denge.
+
+expand(i, i) — odd-length palindrome
+expand(i, i + 1) — even-length palindrome
+*/
+
+
+
+Problem Link : https://leetcode.com/problems/longest-palindromic-substring/
