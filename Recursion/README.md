@@ -40,6 +40,16 @@ This section covers recursion fundamentals and their applications in arrays, mat
 - Power Calculation Using Recursion
 - Recursive String Generation
 
+## Language 
+
+- Java
+
+  
+## Platforms
+
+- GeeksforGeeks (GFG)
+- LeetCode
+
 ## Goal
 
 Build a strong understanding of recursion, master recursive problem-solving techniques, and develop a foundation for advanced DSA topics such as Backtracking, Trees, and Dynamic Programming.
