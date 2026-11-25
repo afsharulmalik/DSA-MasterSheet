@@ -1,0 +1,10 @@
+class Solution {
+    public static int findSum(int n) {
+        // code here
+        if(n==1) return 1;
+        return n + findSum(n-1);
+    }
+}
+
+
+Problem Link : https://www.geeksforgeeks.org/problems/reverse-coding2452/1
