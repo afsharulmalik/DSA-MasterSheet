@@ -6,11 +6,11 @@ This section focuses on applying recursion to array manipulation and mathematica
 
 ### 1. Recursion on Arrays
 
-- [ ] Reverse an Array
+- [x] Reverse an Array
 
 ### 2. Recursion on Maths
 
-- [ ] Pow(x, n)
+- [x] Pow(x, n)
 - [ ] Count Good Numbers
 - [ ] Recursive Implementation of atoi()
 
