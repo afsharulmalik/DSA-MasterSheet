@@ -1,0 +1,52 @@
+class Solution {
+    public int myAtoi(String s) {
+        int i = 0;
+        int n = s.length();
+        // Skip leading whitespace
+        while (i<n && s.charAt(i)==' '){
+            i++;
+        }
+        if (i == n){
+            return 0;
+        }
+        // Check optional sign
+        int sign = 1;
+        char firstChar = s.charAt(i);
+        if (firstChar == '-'){
+            sign = -1;
+            i++;
+        } else if (firstChar == '+'){
+            i++;
+        }
+        // Parse consecutive digits and guard against 32-bit overflow
+        int result = 0;
+        while (i < n && Character.isDigit(s.charAt(i))){
+            int digit = s.charAt(i) - '0';
+            // Clamp to Integer.MAX_VALUE or Integer.MIN_VALUE on overflow
+            if (result >(Integer.MAX_VALUE - digit) / 10){
+                return (sign == 1) ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+            }
+            result = result *10 +digit;
+            i++;
+        }
+        return sign*result;
+    }
+}
+
+
+
+/*
+
+Aapko ek string s milegi (jaise "   -42" ya "4193 with words"), aur aapko usmein se valid number nikal kar 32-bit signed integer (-2147483648 se 2147483647 ke beech) return karna hai.
+
+Kaun-Kaun Se Rules Follow Karne Hain?
+1. Aage ke spaces hatao: Shuru mein jitne bhi ' ' (spaces) hain, unhe ignore karo.
+2. Sign (+ ya -) dekho: Space ke baad agar '-' hai toh number negative hoga, '+' hai toh positive, aur kuch nahi hai toh by default positive maano.
+3. Sirf lagatar digits padho: '0' se '9' tak ke characters ko jor kar number banao. Jaise hi koi non-digit character aaye (letter, space, dot, -, etc.), wahin ruk jao.
+4. 32-bit limit (overflow) sambhalo: Agar number 2147483647 se bada ho jaye toh 2147483647 return karo, aur -2147483648 se chhota ho jaye toh -2147483648 return karo.
+
+*/
+
+
+
+Problem Link : https://www.geeksforgeeks.org/problems/implement-atoi/1
