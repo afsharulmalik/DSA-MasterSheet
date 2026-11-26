@@ -11,8 +11,8 @@ This section focuses on applying recursion to array manipulation and mathematica
 ### 2. Recursion on Maths
 
 - [x] Pow(x, n)
-- [ ] Count Good Numbers
-- [ ] Recursive Implementation of atoi()
+- [x] Count Good Numbers
+- [x] Recursive Implementation of atoi()
 
 ## Topics Covered
 
