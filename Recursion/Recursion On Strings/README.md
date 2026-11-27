@@ -6,7 +6,7 @@ This section focuses on solving string-related problems using recursion. It cove
 
 ### 1. String Recursion
 
-- [ ] Generate Binary Strings Without Consecutive 1s
+- [x] Generate Binary Strings Without Consecutive 1s
 
 ## Topics Covered
 
