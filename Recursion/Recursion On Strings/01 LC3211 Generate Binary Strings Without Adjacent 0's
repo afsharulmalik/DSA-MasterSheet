@@ -1,0 +1,30 @@
+class Solution {
+    // helper function
+    public void solve(int n, StringBuilder str, List<String> ans){
+        if(str.length() == n){ // base case
+            ans.add(str.toString());
+            return;
+        }
+        str.append('1'); // 1 ko append krke start karo
+        solve(n,str,ans);
+        str.deleteCharAt(str.length()-1);
+
+        // 2nd case 
+        if(str.length() ==0 || str.charAt(str.length()-1)=='1'){
+            str.append('0');
+            solve(n,str,ans);
+            str.deleteCharAt(str.length()-1);
+        }
+    }
+    // main function
+    public List<String> validStrings(int n) {
+        List<String> ans = new ArrayList<>();
+        StringBuilder str = new StringBuilder();
+        solve(n,str,ans);
+        return ans;
+    }
+}
+
+
+
+Problem Link : https://leetcode.com/problems/generate-binary-strings-without-adjacent-zeros/
