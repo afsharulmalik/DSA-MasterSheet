@@ -1,0 +1,161 @@
+// khud se kiya hu isko
+// merge sort
+// this question is reliable for merge sort not for quick sort 
+class Solution{
+    // helper function 2
+    public void merge(int[] nums, int low, int mid, int high){
+        int[] temp = new int[high-low+1];
+        int left = low;
+        int right = mid+1;
+        int idx = 0;
+        while(left<=mid && right <=high){
+            if (nums[left]<=nums[right]){
+                temp[idx++]= nums[left++];
+            } else{
+                temp[idx++]= nums[right++];
+            }
+        }
+        while(left<=mid){
+            temp[idx++]=nums[left++];
+        } 
+        while(right <= high){
+            temp[idx++]=nums[right++];
+        }
+        for(int i= low; i<=high; i++) {
+            nums[i] = temp[i-low];
+        }
+    }
+    // helper function 1
+    public void mergeSort(int[] nums, int low, int high){
+        if(low>=high) return;
+        int mid = low +(high-low)/2;
+        mergeSort(nums, low, mid); // ye left side se sorting perform karega 
+        mergeSort(nums, mid+1, high); // ye right side se 
+        merge(nums, low, mid, high);
+    }
+    // main function
+    public int[] sortArray(int[] nums){
+        mergeSort(nums, 0, nums.length-1);
+        return nums;
+    }
+}
+
+// Quick Sort hai ye 
+
+// class Solution {
+//     public int[] sortArray(int[] nums) {
+//         quickSort(nums, 0, nums.length - 1);
+//         return nums;
+//     }
+//     private void quickSort(int[] nums, int low, int high) {
+//         if (low >= high) return;
+//         int pivotIndex = partition(nums, low, high);
+//         quickSort(nums, low, pivotIndex - 1);
+//         quickSort(nums, pivotIndex + 1, high);
+//     }
+//     private int partition(int[] nums, int low, int high) {
+//         int randomIndex = low +
+//             (int)(Math.random() * (high - low + 1));
+//         int temp = nums[randomIndex];
+//         nums[randomIndex] = nums[high];
+//         nums[high] = temp;
+//         int pivot = nums[high];
+//         int i = low - 1;
+//         for (int j = low; j < high; j++) {
+//             if (nums[j] <= pivot) {
+//                 i++;
+//                 temp = nums[i];
+//                 nums[i] = nums[j];
+//                 nums[j] = temp;
+//             }
+//         }
+//         temp = nums[i + 1];
+//         nums[i + 1] = nums[high];
+//         nums[high] = temp;
+//         return i + 1;
+//     }
+// }
+
+
+
+
+
+
+
+// phle ka solution
+// class Solution {
+//     public int[] sortArray(int[] arr) {
+//         // pehle har ek ele ko alag karenge sort karenge phir merge karenge
+//         mergeSort(arr);
+//         return arr;
+//     }
+//     // issey poora array sort ho rha hai alag alag hoke 
+//     private static void mergeSort(int[] arr) {
+//         int n = arr.length;
+//         if(n==1) return;
+//         // 1. Create 2 new empty arrays of size n/2 each
+//         int[] a = new int[n/2];
+//         int[] b = new int[n-n/2];
+//         // 2. copy paste into a and b
+//         int idx =0;
+//         for(int i=0; i<a.length; i++){
+//             a[i] = arr[idx++];
+//         }
+//         for(int i=0; i<b.length; i++){
+//             b[i] = arr[idx++];
+//         }
+//         // 3. Apply magic on a & b
+//         mergeSort(a);
+//         mergeSort(b);
+//         // 4. Merge a & b into arr
+//         merge(a,b,arr);
+//     }
+
+//     private static void merge(int[] a, int[] b, int[] arr) {
+//         int i=0, j=0, k=0;
+//         while(i<a.length && j<b.length){
+//             if(a[i]<=b[j]) arr[k++] = a[i++];
+//             else arr[k++] = b[j++];
+//         }
+//         while(i<a.length) arr[k++] = a[i++];
+//         while (j<b.length) arr[k++] = b[j++];
+//     }
+// }
+
+
+// class Solution {
+//     public int[] sortArray(int[] nums) {
+//         mergeSort(nums, 0, nums.length - 1);
+//         return nums;
+//     }
+
+//     private void mergeSort(int[] nums, int low, int high) {
+//         if (low >= high) return;
+//         int mid = low + (high - low) / 2; // to save from stack ovrflow
+//         mergeSort(nums, low, mid);
+//         mergeSort(nums, mid + 1, high);
+//         merge(nums, low, mid, high);
+//     }
+
+//     private void merge(int[] nums, int low, int mid, int high) {
+//         int[] temp = new int[high - low + 1];
+//         int left = low;
+//         int right = mid + 1;
+//         int index = 0;
+//         while (left <= mid && right <= high) {
+//             if (nums[left] <= nums[right]) temp[index++] = nums[left++];
+//             else temp[index++] = nums[right++];
+//         }
+
+//         while (left <= mid) temp[index++] = nums[left++];
+//         while (right <= high) temp[index++] = nums[right++];
+
+//         for (int i = low; i <= high; i++) {
+//             nums[i] = temp[i - low];
+//         }
+//     }
+// }
+
+
+
+Problem Link : https://leetcode.com/problems/sort-an-array/
