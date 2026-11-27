@@ -6,11 +6,11 @@ This section covers the fundamentals of recursion, including recursive function 
 
 ### 1. Basic Recursion
 
-- [ ] Print 1 to N Without Using Loops
-- [ ] Print N to 1 Without Loop
-- [ ] Sum of First N Numbers
-- [ ] Factorial of a Given Number
-- [ ] Fibonacci Number
+- [x] Print 1 to N Without Using Loops
+- [x] Print N to 1 Without Loop
+- [x] Sum of First N Numbers
+- [x] Factorial of a Given Number
+- [x] Fibonacci Number
 
 ## Topics Covered
 
