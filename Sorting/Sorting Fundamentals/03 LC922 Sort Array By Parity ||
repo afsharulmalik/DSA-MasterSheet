@@ -1,0 +1,21 @@
+class Solution {
+    public int[] sortArrayByParityII(int[] nums) {
+        int n = nums.length;
+        int[] ans = new int[n];
+        int evenIdx = 0;
+        int oddIdx = 1;
+        for(int ele : nums){
+            if(ele %2==0){
+                ans[evenIdx] =ele;
+                evenIdx+=2;
+            }else{
+                ans[oddIdx] =ele;
+                oddIdx+=2;
+            }
+        }
+        return ans;
+    }
+}
+
+
+Problem Link : https://leetcode.com/problems/sort-array-by-parity-ii/?envType=problem-list-v2&envId=sorting
